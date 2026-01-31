@@ -4,14 +4,13 @@ from pages.inventory_page import InventoryPage
 from playwright.sync_api import expect
 
 @pytest.mark.parametrize("username, should_pass", [
-    ("standard_user", True),
-    ("problem_user", True),
-    ("performance_glitch_user", True),
-    ("error_user", True),
-    ("visual_user", True),
-    ("locked_out_user", False)  # This one we expect to fail login
+    pytest.param("standard_user", True, marks=pytest.mark.smoke),
+    pytest.param("problem_user", True, marks=pytest.mark.regression),
+    pytest.param("performance_glitch_user", True, marks=pytest.mark.regression),
+    pytest.param("error_user", True, marks=pytest.mark.regression),
+    pytest.param("visual_user", True, marks=pytest.mark.regression),
+    pytest.param("locked_out_user", False, marks=pytest.mark.negative)  # This one we expect to fail login
 ])
-@pytest.mark.smoke
 def test_multiple_user_logins(page, username, should_pass):
     login_page = LoginPage(page)
     inventory_page = InventoryPage(page)
