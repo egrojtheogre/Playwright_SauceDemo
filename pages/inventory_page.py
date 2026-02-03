@@ -9,6 +9,7 @@ class InventoryPage:
         self.onesie_add_button = page.locator("[data-test='add-to-cart-sauce-labs-onesie']")
         self.bike_light_add_button = page.locator("[data-test='add-to-cart-sauce-labs-bike-light']")
         self.fleece_jacket_add_button = page.locator("[data-test='add-to-cart-sauce-labs-fleece-jacket']")
+        self.bolt_tshirt_add_button = page.locator("[data-test='add-to-cart-sauce-labs-bolt-t-shirt']")
         self.cart_badge = page.locator(".shopping_cart_badge")
         self.cart_link = page.locator(".shopping_cart_link")
         self.checkout_button = page.locator("[data-test='checkout']")
@@ -18,6 +19,9 @@ class InventoryPage:
 
     def add_backpack_to_cart(self):
         self.backpack_add_button.click()
+
+    def add_bolt_tshirt_to_cart(self):
+        self.bolt_tshirt_add_button.click()
 
     def add_onesie_to_cart(self):
         self.onesie_add_button.click()
