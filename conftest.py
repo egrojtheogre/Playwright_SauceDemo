@@ -1,3 +1,5 @@
+# This file is a configuration for the test, it is required to get a screenshot in case a test execution fails, so we can see in which screen the error is happening
+
 import pytest
 from datetime import datetime
 import os

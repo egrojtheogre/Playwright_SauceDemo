@@ -1,3 +1,5 @@
+# This file contains elements to interact on the cart page, as well as the actions that can be performed on the page, defined as functions.
+# this is the best practice according to POM (Page Object Model)
 
 class CartPage:
     def __init__(self, page):

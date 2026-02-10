@@ -1,3 +1,6 @@
+# This file contains tests related to log in, defined as functions, which perform several calls to different files inside pages folder.
+# some modules are imported from playwright api
+
 import pytest
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage

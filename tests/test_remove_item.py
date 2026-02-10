@@ -1,3 +1,5 @@
+# This file contains tests related to remove an item from the cart, defined as functions, which perform several calls to different files inside pages folder.
+# some modules are imported from playwright api
 
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
